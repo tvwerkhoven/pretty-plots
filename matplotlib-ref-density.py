@@ -28,6 +28,7 @@ for x in N.linspace(0,1, 256):
 	cols.append((rcol, gcol, bcol))
 
 cm_plusmin = matplotlib.colors.LinearSegmentedColormap.from_list("PaulT_plusmin", cols)
+# This colormap is very similar to the built-in cmap RdYlBu, see <http://www.scipy.org/Cookbook/Matplotlib/Show_colormaps>
 
 # Linear colormap (white--red)
 from scipy.special import erf
@@ -40,6 +41,7 @@ for x in N.linspace(0,1, 256):
 	cols.append((rcol, gcol, bcol))
 
 cm_linear = matplotlib.colors.LinearSegmentedColormap.from_list("PaulT_linear", cols)
+# This colormap is very similar to the built-in cmap RdOrBr, see <http://www.scipy.org/Cookbook/Matplotlib/Show_colormaps>
 
 # Linear colormap (rainbow)
 cols = [(0,0,0)]
@@ -51,23 +53,24 @@ for x in N.linspace(0,1, 254):
 
 cols.append((1,1,1))
 cm_rainbow = matplotlib.colors.LinearSegmentedColormap.from_list("PaulT_rainbow", cols)
+# This colormap is close to the built-in cmap 'Spectral', see <http://www.scipy.org/Cookbook/Matplotlib/Show_colormaps>
 
 # Plot examples
 tmpim = N.arange(256).reshape(1,-1)
 plt.close()
-plt.title("www.sron.nl/~pault variation around zero colormap")
+plt.title("www.sron.nl/~pault variation around zero colormap (like RdYlBu)")
 plt.imshow(tmpim, cmap=plt.get_cmap(cm_plusmin), aspect='auto')
 plt.savefig("matplotlib-ref-plusmin.pdf")
 plt.savefig("matplotlib-ref-plusmin.eps")
 
 plt.close()
-plt.title("www.sron.nl/~pault linear colormap")
+plt.title("www.sron.nl/~pault linear colormap (like RdOrBr)")
 plt.imshow(tmpim, cmap=plt.get_cmap(cm_linear), aspect='auto')
 plt.savefig("matplotlib-ref-linear.pdf")
 plt.savefig("matplotlib-ref-linear.eps")
 
 plt.close()
-plt.title("www.sron.nl/~pault rainbow colormap")
+plt.title("www.sron.nl/~pault rainbow colormap (like Spectral)")
 plt.imshow(tmpim, cmap=plt.get_cmap(cm_rainbow), aspect='auto')
 plt.savefig("matplotlib-ref-rainbow.pdf")
 plt.savefig("matplotlib-ref-rainbow.eps")
