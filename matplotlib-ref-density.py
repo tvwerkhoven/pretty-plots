@@ -4,19 +4,19 @@
 # @file matplotlib-ref-density.py -- matplotlib example script
 # Copyright (C) 2011 Tim van Werkhoven (t.i.m.vanwerkhoven@xs4all.nl)
 #
-# This work is licensed under the Creative Commons Attribution-Share Alike 
-# 3.0 Unported License. To view a copy of this license, visit 
-# http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative 
+# This work is licensed under the Creative Commons Attribution-Share Alike
+# 3.0 Unported License. To view a copy of this license, visit
+# http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative
 # Commons, 171 Second Street, Suite 300, San Francisco, California,94105, USA.
 
 import pylab as plt
 import numpy as N
 import matplotlib
 
-# Make colormap based on Paul Tol's best visibility gradients. See 
+# Make colormap based on Paul Tol's best visibility gradients. See
 # <http://www.sron.nl/~pault/> for more info on these colors. Also see
 # <http://matplotlib.sourceforge.net/api/colors_api.html>
-# and <http://www.scipy.org/Cookbook/Matplotlib/Show_colormaps> on some 
+# and <http://www.scipy.org/Cookbook/Matplotlib/Show_colormaps> on some
 # matplotlib examples
 
 # Deviation around zero colormap (blue--red)
@@ -41,7 +41,7 @@ for x in N.linspace(0,1, 256):
 	cols.append((rcol, gcol, bcol))
 
 cm_linear = matplotlib.colors.LinearSegmentedColormap.from_list("PaulT_linear", cols)
-# This colormap is very similar to the built-in cmap RdOrBr, see <http://www.scipy.org/Cookbook/Matplotlib/Show_colormaps>
+# This colormap is very similar to the built-in cmap YlOrBr, see <http://www.scipy.org/Cookbook/Matplotlib/Show_colormaps>
 
 # Linear colormap (rainbow)
 cols = [(0,0,0)]
@@ -64,7 +64,7 @@ plt.savefig("matplotlib-ref-plusmin.pdf")
 plt.savefig("matplotlib-ref-plusmin.eps")
 
 plt.close()
-plt.title("www.sron.nl/~pault linear colormap (like RdOrBr)")
+plt.title("www.sron.nl/~pault linear colormap (like YlOrBr)")
 plt.imshow(tmpim, cmap=plt.get_cmap(cm_linear), aspect='auto')
 plt.savefig("matplotlib-ref-linear.pdf")
 plt.savefig("matplotlib-ref-linear.eps")
