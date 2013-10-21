@@ -1,7 +1,7 @@
 Tim's plot examples
 ===================
 
-These are some small scripts in Gnuplot and Python/matplotlib to plot nice figures. Most of the plots are aimed at using Paul Tol's optimal colour schemes as described on his homepage at <http://www.sron.nl/~pault/>.
+These are some small scripts in Gnuplot and Python/matplotlib to plot nice figures. Most of the plots are aimed at using Paul Tol's optimal colour schemes[1].
 
 Note that for matplotlib, the colour schemes RdYlBu, YlOrBr and Spectral are close to the colour schemes Paul Tol proposes.
 
@@ -24,7 +24,7 @@ Python
 
 - matplotlib-ref-density.py generates color map examples
 - matplotlib-ref-latex.py generates LaTeX examples
-- matplotlib-ref-zernike.py generates example plots of Zernike shapes[1]
+- matplotlib-ref-zernike.py generates example plots of Zernike shapes[2]
 
 Gnuplot
 -------
@@ -69,3 +69,9 @@ Version history
 ## 20111109
 
 - Added README
+
+References
+==========
+
+[1] Paul Tol's Notes -- http://www.sron.nl/~pault/
+[2] Zernike Polynomials -- Wikipedia, the free encyclopedia -- https://en.wikipedia.org/wiki/Zernike_polynomials
